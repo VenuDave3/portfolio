@@ -14,11 +14,15 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <span className="text-xl font-semibold text-slate-900 tracking-tight">
-              {personalInfo.name.split(' ')[0]}
-              <span className="text-blue-600">.</span>
+          {/* Logo with Photo */}
+          <Link to="/" className="flex items-center gap-3">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_hire-me-dev-3/artifacts/w90y4hl5_IMG_1127.jpg"
+              alt="Venu Dave"
+              className="w-9 h-9 rounded-full object-cover border-2 border-slate-200"
+            />
+            <span className="text-lg font-semibold text-slate-900 tracking-tight">
+              Venu Dave
             </span>
           </Link>
 
