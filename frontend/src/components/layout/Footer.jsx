@@ -10,9 +10,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <Link to="/" className="text-xl font-semibold text-slate-900 tracking-tight">
-              {personalInfo.name.split(' ')[0]}
-              <span className="text-blue-600">.</span>
+            <Link to="/" className="flex items-center gap-3">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_hire-me-dev-3/artifacts/w90y4hl5_IMG_1127.jpg"
+                alt="Venu Dave"
+                className="w-8 h-8 rounded-full object-cover border-2 border-slate-200"
+              />
+              <span className="text-lg font-semibold text-slate-900 tracking-tight">
+                Venu Dave
+              </span>
             </Link>
             <p className="mt-3 text-sm text-slate-600 leading-relaxed">
               Software Engineer focused on building reliable, 
