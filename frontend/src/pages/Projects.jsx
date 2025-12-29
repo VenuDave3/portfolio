@@ -43,14 +43,6 @@ const ProjectCard = ({ project, isExpanded }) => {
                 </Button>
               </a>
             )}
-            {project.hasDemo && (
-              <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                <Button size="sm" className="gap-2 bg-blue-600 hover:bg-blue-700">
-                  <ExternalLink size={14} />
-                  Live Demo
-                </Button>
-              </a>
-            )}
           </div>
         </div>
 
