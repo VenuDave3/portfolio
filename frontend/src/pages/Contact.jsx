@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Mail, Linkedin, Github, Calendar, Download, Send, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Mail, Linkedin, Github, Calendar, Download, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Input } from '../components/ui/input';
@@ -8,6 +9,9 @@ import { Textarea } from '../components/ui/textarea';
 import { Label } from '../components/ui/label';
 import { personalInfo } from '../data/mock';
 import Layout from '../components/layout/Layout';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,25 +22,38 @@ const Contact = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    setError(null);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
     
-    // Simulate form submission (mock - will be replaced with backend)
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: '', email: '', company: '', message: '' });
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
+    try {
+      const response = await axios.post(`${API}/contact`, {
+        name: formData.name,
+        email: formData.email,
+        company: formData.company || null,
+        message: formData.message
+      });
+      
+      if (response.data.success) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', company: '', message: '' });
+        setTimeout(() => setIsSubmitted(false), 5000);
+      }
+    } catch (err) {
+      console.error('Contact form error:', err);
+      setError(err.response?.data?.detail || 'Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactMethods = [
