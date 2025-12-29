@@ -247,6 +247,13 @@ const Contact = () => {
                         />
                       </div>
 
+                      {error && (
+                        <div className="flex items-center gap-2 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                          <AlertCircle size={16} />
+                          {error}
+                        </div>
+                      )}
+
                       <Button 
                         type="submit" 
                         size="lg" 
