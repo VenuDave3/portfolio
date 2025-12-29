@@ -90,7 +90,6 @@ export const projects = [
     ],
     techStack: ["PyTorch", "TensorFlow", "LLaMA 3.2", "BERT", "CNNs", "Streamlit", "Python"],
     learnings: "Combining multiple AI modalities (vision + NLP) requires careful pipeline design and consistent data flow between stages.",
-    hasDemo: true,
     hasRepo: true,
     repoUrl: "https://github.com/venudave/bookshelf-reader",
     featured: true
@@ -118,7 +117,6 @@ export const projects = [
     ],
     techStack: ["Next.js", "React", "Redux Toolkit", "Node.js", "Express.js", "MongoDB", "Mongoose"],
     learnings: "Full-stack development requires careful API contract design and consistent data modeling between frontend and backend.",
-    hasDemo: true,
     hasRepo: true,
     repoUrl: "https://github.com/venudave/lms-prototype",
     featured: true
