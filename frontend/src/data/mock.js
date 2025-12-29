@@ -9,10 +9,11 @@ export const personalInfo = {
   email: "venudave333@gmail.com",
   phone: "+1 (617)-963-4238",
   linkedin: "https://www.linkedin.com/in/dave-venu/",
-  github: "https://github.com/venudave",
+  github: "https://github.com/VenuDave3",
   location: "Boston, MA",
   resumeUrl: "/resume.pdf",
-  calendlyUrl: "https://calendly.com/venudave333"
+  calendlyUrl: "https://calendly.com/venudave333",
+  photo: "https://customer-assets.emergentagent.com/job_hire-me-dev-3/artifacts/w90y4hl5_IMG_1127.jpg"
 };
 
 export const impactHighlights = [
