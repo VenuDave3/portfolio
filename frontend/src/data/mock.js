@@ -119,7 +119,8 @@ export const projects = [
     techStack: ["Next.js", "React", "Redux Toolkit", "Node.js", "Express.js", "MongoDB", "Mongoose"],
     learnings: "Full-stack development requires careful API contract design and consistent data modeling between frontend and backend.",
     hasRepo: true,
-    repoUrl: "https://github.com/venudave/lms-prototype",
+    repoUrl: "https://github.com/VenuDave3/kambaz-next-js",
+    repoUrlBackend: "https://github.com/VenuDave3/kambaz-node-server-app",
     featured: true
   },
   {
