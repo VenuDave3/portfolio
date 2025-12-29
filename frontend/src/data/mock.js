@@ -146,9 +146,8 @@ export const projects = [
     ],
     techStack: ["Python", "TensorFlow", "LSTM", "RNN", "NLP", "Pandas", "NumPy"],
     learnings: "Feature engineering and careful data preprocessing often matter more than model architecture complexity.",
-    hasDemo: false,
     hasRepo: true,
-    repoUrl: "https://github.com/venudave/fake-news-detection",
+    repoUrl: "https://github.com/VenuDave3/Fake-News-Detector",
     featured: false
   },
   {
