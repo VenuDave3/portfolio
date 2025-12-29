@@ -23,54 +23,81 @@ const Home = () => {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-blue-50/30" />
         <div className="relative max-w-6xl mx-auto px-6 pt-20 pb-24">
-          <div className="max-w-3xl">
-            {/* Status Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-6">
-              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-sm text-blue-700 font-medium">Open to SDE & ML/LLM roles</span>
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
+            {/* Left Content */}
+            <div className="max-w-2xl">
+              {/* Status Badge */}
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-6">
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                <span className="text-sm text-blue-700 font-medium">Open to SDE & ML/LLM roles</span>
+              </div>
+
+              {/* Main Headline */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight tracking-tight">
+                Software Engineer Who Ships{' '}
+                <span className="text-blue-600">Production-Grade AI Systems</span>
+              </h1>
+
+              {/* Subheadline */}
+              <p className="mt-6 text-lg md:text-xl text-slate-600 leading-relaxed">
+                Built an agentic NL-to-SQL assistant at <span className="font-semibold text-slate-800">Amazon</span> that 
+                reduced data access time by <span className="font-semibold text-slate-800">90%</span>. 
+                MS CS @ Northeastern | <span className="font-semibold text-slate-800">3.91 GPA</span>
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link to="/projects">
+                  <Button size="lg" className="bg-slate-900 hover:bg-slate-800 text-white gap-2">
+                    View My Work
+                    <ArrowRight size={18} />
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button size="lg" variant="outline" className="border-slate-300 text-slate-700 hover:bg-slate-50">
+                    Get In Touch
+                  </Button>
+                </Link>
+              </div>
+
+              {/* Quick Stats */}
+              <div className="mt-12 flex flex-wrap gap-8 text-sm text-slate-500">
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-slate-900">Amazon</span>
+                  <span>SDE Intern</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-slate-900">Northeastern</span>
+                  <span>MS CS</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-slate-900">5+</span>
+                  <span>Production Projects</span>
+                </div>
+              </div>
             </div>
 
-            {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight tracking-tight">
-              Software Engineer Who Ships{' '}
-              <span className="text-blue-600">Production-Grade AI Systems</span>
-            </h1>
-
-            {/* Subheadline */}
-            <p className="mt-6 text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl">
-              Built an agentic NL-to-SQL assistant at <span className="font-semibold text-slate-800">Amazon</span> that 
-              reduced data access time by <span className="font-semibold text-slate-800">90%</span>. 
-              MS CS @ Northeastern | <span className="font-semibold text-slate-800">3.91 GPA</span>
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link to="/projects">
-                <Button size="lg" className="bg-slate-900 hover:bg-slate-800 text-white gap-2">
-                  View My Work
-                  <ArrowRight size={18} />
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-slate-300 text-slate-700 hover:bg-slate-50">
-                  Get In Touch
-                </Button>
-              </Link>
-            </div>
-
-            {/* Quick Stats */}
-            <div className="mt-12 flex flex-wrap gap-8 text-sm text-slate-500">
-              <div className="flex items-center gap-2">
-                <span className="font-mono text-slate-900">Amazon</span>
-                <span>SDE Intern</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-mono text-slate-900">Northeastern</span>
-                <span>MS CS</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-mono text-slate-900">5+</span>
-                <span>Production Projects</span>
+            {/* Right - Photo */}
+            <div className="flex-shrink-0">
+              <div className="relative">
+                {/* Decorative background */}
+                <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-slate-100 rounded-3xl -rotate-6" />
+                <div className="absolute -inset-4 bg-gradient-to-tr from-slate-100 to-blue-50 rounded-3xl rotate-3" />
+                {/* Photo */}
+                <div className="relative">
+                  <img 
+                    src={personalInfo.photo}
+                    alt="Venu Dave"
+                    className="w-72 h-80 md:w-80 md:h-96 object-cover rounded-2xl shadow-xl border-4 border-white"
+                  />
+                  {/* Floating badge */}
+                  <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg px-4 py-2 border border-slate-100">
+                    <div className="flex items-center gap-2">
+                      <span className="text-2xl font-bold text-slate-900">3.91</span>
+                      <span className="text-sm text-slate-500">GPA</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
