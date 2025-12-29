@@ -92,7 +92,7 @@ export const projects = [
     techStack: ["PyTorch", "TensorFlow", "LLaMA 3.2", "BERT", "CNNs", "Streamlit", "Python"],
     learnings: "Combining multiple AI modalities (vision + NLP) requires careful pipeline design and consistent data flow between stages.",
     hasRepo: true,
-    repoUrl: "https://github.com/venudave/bookshelf-reader",
+    repoUrl: "https://github.com/VenuDave3/Bookshelf-Reader",
     featured: true
   },
   {
