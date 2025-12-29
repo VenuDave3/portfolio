@@ -39,7 +39,15 @@ const ProjectCard = ({ project, isExpanded }) => {
               <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="sm" className="gap-2 border-slate-300">
                   <Github size={14} />
-                  View Code
+                  {project.repoUrlBackend ? 'Frontend' : 'View Code'}
+                </Button>
+              </a>
+            )}
+            {project.repoUrlBackend && (
+              <a href={project.repoUrlBackend} target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="sm" className="gap-2 border-slate-300">
+                  <Github size={14} />
+                  Backend
                 </Button>
               </a>
             )}
