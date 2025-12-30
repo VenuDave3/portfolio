@@ -12,7 +12,7 @@ export const personalInfo = {
   github: "https://github.com/VenuDave3",
   location: "Boston, MA",
   resumeUrl: "/resume.pdf",
-  calendlyUrl: "https://calendly.com/venudave333",
+  calendlyUrl: "https://calendly.com/venudave333/30min",
   photo: "https://customer-assets.emergentagent.com/job_hire-me-dev-3/artifacts/w90y4hl5_IMG_1127.jpg"
 };
 
