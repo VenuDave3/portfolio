@@ -23,7 +23,7 @@ export const impactHighlights = [
     icon: "Zap"
   },
   {
-    metric: "60%",
+    metric: "85%",
     description: "Improvement in LLM query reliability through prompt engineering",
     icon: "TrendingUp"
   },
@@ -57,7 +57,7 @@ export const projects = [
     ],
     impact: [
       "Reduced database query turnaround from days to minutes",
-      "Improved LLM-generated query reliability by 60%",
+      "Improved LLM-generated query reliability by 85%",
       "Enabled non-SQL engineers to self-serve insights",
       "Piloted across multiple internal engineering teams"
     ],
@@ -188,7 +188,7 @@ export const experience = [
     type: "Internship",
     highlights: [
       "Reduced database query turnaround from days to minutes by building an AI-powered NL-to-SQL assistant",
-      "Improved reliability of LLM-generated queries by 60% through advanced prompt engineering",
+      "Improved reliability of LLM-generated queries by 85% through advanced prompt engineering",
       "Streamlined complex schema access (60+ tables) by engineering a schema-ingestion pipeline",
       "Designed modular agent workflows using LangChain + MCP servers with production-ready reliability",
       "Owned end-to-end delivery while collaborating across teams on use cases",
